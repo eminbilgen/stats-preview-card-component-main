@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="width: 100%; height:100%; background-color:hsl(233, 47%, 7%);">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -7,27 +7,46 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Stats preview card component</title>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter&family=Lexend+Deca:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution a { color: hsl(228, 45%, 44%);}
+    *{
+      --Soft-violet: #aa5cdb;
+    }
   </style>
 </head>
-<body>
-
-  Get insights that help your business grow.
-
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
-
-  10k+ companies
-  314 templates
-  12m+ queries
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+<body class="w-full h-full flex items-center justify-center">
+  <main class="w-5/6 h-5/6 bg-[#1b1938] rounded-md flex justify-center items-center flex-col text-white md:flex-row-reverse md:h-3/6 md:justify-between">
+      <div class="image flex items-center justify-center bg-[#aa5cdb] rounded-tr-md rounded-tl-md md:h-full md:w-auto md:rounded-">
+        <img src="images/image-header-mobile.jpg" alt="image-header-mobile" class="w-auto h-full rounded-tr-md rounded-tl-md opacity-[0.6] md:hidden">
+        <img src="images/image-header-desktop.jpg" alt="image-header-desktop" class="w-auto h-full rounded-tr-md rounded-br-md opacity-[0.6] hidden md:block">
+      </div>
+      <div class="card md:ml-12 w-3/6 md:h-5/6 md:w-3/6 md:text-left h-full flex flex-col justify-center items-center text-center md:items-start">
+        <div class="card-header w-full md:w-4/6 h-36 text-3xl  font-bold flex justify-center items-center" style="font-family: 'Lexend Deca', sans-serif;">
+          <h1>Get <span class="text-[#A462D4]">insights</span> that help your business grow.</h1>
+        </div>
+        <div class="card-body w-full md:w-4/6 h-[65%] flex flex-col items-center justify-between md:h-[100%]">
+          <p class="text-[1.1rem] text-[#ffffffbf]">Discover the benefits of data <br>analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
+          <div class="card-footer h-52 md:flex md:h-24 md:w-full md:justify-between">
+            <div class="card-footer-item h-2/6 flex flex-col justify-around items-center">
+              <h2 class="text-2xl font-bold">10k+</h2>
+              <p class="text-[#ffffffbf] text-[.9rem]" style="font-family: 'Inter', sans-serif;">COMPANIES</p>
+            </div>
+            <div class="card-footer-item h-2/6 flex flex-col justify-around items-center">
+              <h2 class="text-2xl font-bold">314</h2>
+              <p class="text-[#ffffffbf] text-[.9rem]" style="font-family: 'Inter', sans-serif;">TEMPLATES</p>
+            </div>
+            <div class="card-footer-item h-2/6 flex flex-col justify-around items-center">
+              <h2 class="text-2xl font-bold">12m+</h2>
+              <p class="text-[#ffffffbf] text-[.9rem]" style="font-family: 'Inter', sans-serif;">QUERIES</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
 </body>
 </html>
